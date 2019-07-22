@@ -3,6 +3,8 @@ This is a basic bejeweled grid app that was bootstrapped with [Create React App]
 
 **Demo:** [View Here](https://bejeweled-game.surge.sh)
 
+<img src="https://github.com/kaitlynhova/bejeweled-game/blob/master/public/preview.png" width="300"/>
+
 **What this app does:**
 - Randomly generates a grid of colors without 3 matching colors next to each other on page load
 - Randomly re generates this grid ^^ of colors by pressing on a button in the sidebar
