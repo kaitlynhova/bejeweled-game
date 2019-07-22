@@ -9,9 +9,9 @@ This is a basic bejeweled grid app that was bootstrapped with [Create React App]
 - Randomly generates a grid of colors without 3 matching colors next to each other on page load
 - Randomly re generates this grid ^^ of colors by pressing on a button in the sidebar
 - Has the ability to click on any two adjacent squares to "swap them"
-- It removes all adjacent matches for the two swapped squares
-- Keeps score for the number of squares in the matches you make
-- Moves all of the squares above the newly empty match area "down" until they are stacked on top of other non empty squares
+- It removes all adjacent matches > 2 length for the two swapped squares
+- Keeps score for the number of matches you make
+- Moves all of the squares above the newly empty match area "down" until they are stacked on top of other non empty squares ("Gravity")
 - Repopulates the top part of the grid after squares "fall down" ^^ with random colored squares
 
 **What this app des not do but could do in the future:**
