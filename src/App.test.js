@@ -185,6 +185,39 @@ describe('Bejeweled app', () => {
 
   it('removes adjacent matches', () => {
     const inputGrid = [
+      1, 1, 2, 1, 2, 2, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+    ];
+
+    const adjacentMatchGrid = [
+      -1, -1, -1, -1, -1, -1, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+      0, 0, 0, 0, 0, 0, 0, 0,
+    ];
+    // populate app with custom grid
+    const app = shallow(<App colors={inputGrid} />);
+    // click to swap and match vertically
+    app.instance().handleGemClick(2);
+    expect(app.state().indexToSwap).toBe(2);
+    app.instance().handleGemClick(3);
+    expect(app.state().indexToSwap).toBe(undefined);
+    // test that gravity has been applied
+    expect(app.state().colors).toEqual(adjacentMatchGrid);
+  });
+
+  it('removes side by side matches', () => {
+    const inputGrid = [
       2, 1, 0, 0, 0, 0, 0, 0,
       1, 2, 0, 0, 0, 0, 0, 0,
       1, 2, 0, 0, 0, 0, 0, 0,
