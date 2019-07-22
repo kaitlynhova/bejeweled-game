@@ -177,11 +177,9 @@ describe('Bejeweled app', () => {
     // click to swap and match vertically
     app.instance().handleGemClick(16);
     expect(app.state().indexToSwap).toBe(16);
-    console.log(JSON.stringify(app.state()));
     app.instance().handleGemClick(17);
     expect(app.state().indexToSwap).toBe(undefined);
     // test that gravity has been applied
-    console.log(JSON.stringify(app.state()));
     expect(app.state().colors).toEqual(verticalAndHorizontalMatchGrid);
   });
 

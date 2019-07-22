@@ -1,7 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-
-import { theme } from './theme.js'
+import { ThemeContext } from './theme.js'
 import { FlexWrapper, Grid, Screen, SideBar, Square } from './components'
 
 class App extends React.PureComponent {
@@ -184,7 +182,7 @@ class App extends React.PureComponent {
         colorIndex={x}
         onClick={() => this.handleGemClick(i)} />);
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeContext>
         <FlexWrapper>
           <Screen>
             <Grid>
@@ -193,7 +191,7 @@ class App extends React.PureComponent {
             <SideBar resetColors={this.resetColors} score={this.state.score} />
           </Screen>
         </FlexWrapper>
-      </ThemeProvider>
+      </ThemeContext>
     );
   };
 }

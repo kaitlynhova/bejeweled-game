@@ -1,3 +1,6 @@
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+
 export const theme = {
     backgroundColors: {
         button: "#F82636",
@@ -42,3 +45,8 @@ export const theme = {
         screen: 800,
     }
 }
+
+
+export const ThemeContext = ({ children }) => (
+    <ThemeProvider theme={theme}>{children}</ThemeProvider>
+);
