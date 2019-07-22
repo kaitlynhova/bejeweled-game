@@ -1,4 +1,4 @@
-# Bejeweled App
+# Bejeweled App [![Build Status](https://travis-ci.org/kaitlynhova/bejeweled-game.svg?branch=master)](https://travis-ci.org/kaitlynhova/bejeweled-game)
 This is a basic bejeweled grid app that was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 **Demo:** [View Here](https://bejeweled-game.surge.sh)
