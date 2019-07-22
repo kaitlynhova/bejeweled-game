@@ -19,6 +19,7 @@ This is a basic bejeweled grid app that was bootstrapped with [Create React App]
 - Other extra gamplay mechanics that the regular bejeweled game has
 - Create additional tests 
 - Organize repeatable helper functions instead of implementing them as class functions
+- Break up ``handleMatches`` function into different functions
 
 ## Prerequisites
 You must have node installed.
