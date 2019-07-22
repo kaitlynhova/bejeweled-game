@@ -97,9 +97,9 @@ describe('Bejeweled app', () => {
     ];
 
     const verticalMatchGrid = [
-      1, 0, 2, 0, 0, 0, 0, 0,
-      1, 2, 0, 0, 0, 0, 0, 0,
-      1, 0, 0, 0, 0, 0, 0, 0,
+      -1, 0, 2, 0, 0, 0, 0, 0,
+      -1, 2, 0, 0, 0, 0, 0, 0,
+      -1, 0, 0, 0, 0, 0, 0, 0,
       0, 0, 0, 0, 0, 0, 0, 0,
       0, 0, 0, 0, 0, 0, 0, 0,
       0, 0, 0, 0, 0, 0, 0, 0,
@@ -114,7 +114,7 @@ describe('Bejeweled app', () => {
     app.instance().handleGemClick(1);
     expect(app.state().indexToSwap).toBe(undefined);
     // test that gravity has been applied
-    expect(app.state().colors).not.toBe(verticalMatchGrid);
+    expect(app.state().colors).toEqual(verticalMatchGrid);
   });
 
   it('removes horizontal matches', () => {
@@ -196,9 +196,9 @@ describe('Bejeweled app', () => {
     ];
 
     const adjacentMatchGrid = [
-      1, 2, 0, 0, 0, 0, 0, 0,
-      1, 2, 0, 0, 0, 0, 0, 0,
-      1, 2, 0, 0, 0, 0, 0, 0,
+      -1, -1, 0, 0, 0, 0, 0, 0,
+      -1, -1, 0, 0, 0, 0, 0, 0,
+      -1, -1, 0, 0, 0, 0, 0, 0,
       0, 0, 0, 0, 0, 0, 0, 0,
       0, 0, 0, 0, 0, 0, 0, 0,
       0, 0, 0, 0, 0, 0, 0, 0,
@@ -213,6 +213,6 @@ describe('Bejeweled app', () => {
     app.instance().handleGemClick(1);
     expect(app.state().indexToSwap).toBe(undefined);
     // test that gravity has been applied
-    expect(app.state().colors).not.toBe(adjacentMatchGrid);
+    expect(app.state().colors).toEqual(adjacentMatchGrid);
   });
 });
