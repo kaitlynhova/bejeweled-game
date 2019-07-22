@@ -1,68 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Bejeweled App
+This is a basic bejeweled grid app that was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+**Demo:** [View Here](https://bejeweled-game.surge.sh)
 
-In the project directory, you can run:
+**What this app does:**
+- Randomly generates a grid of colors without 3 matching colors next to each other on page load
+- Randomly re generates this grid ^^ of colors by pressing on a button in the sidebar
+- Has the ability to click on any two adjacent squares to "swap them"
+- It removes all adjacent matches for the two swapped squares
+- Keeps score for the number of squares in the matches you make
+- Moves all of the squares above the newly empty match area "down" until they are stacked on top of other non empty squares
+- Repopulates the top part of the grid after squares "fall down" ^^ with random colored squares
 
-### `npm start`
+**What this app des not do but could do in the future:**
+- Remove all random matches not directly next to the two swapped squares
+- Other extra gamplay mechanics that the regular bejeweled game has
+- Create additional tests 
+- Organize repeatable helper functions instead of implementing them as class functions
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Prerequisites
+You must have node installed.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## To Start
+1. Clone this repo
+    ```
+    git clone https://github.com/kaitlynhova/bejeweled-game.git
+    ```
+2. In your project folder in Terminal, run:
+   - `npm install`
+   - `npm start`
+3.  Open [localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Testing 
+run `npm test` in your project folder in Terminal

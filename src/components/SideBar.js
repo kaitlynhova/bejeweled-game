@@ -1,6 +1,7 @@
-import styled from 'styled-components';
-import { Button } from '../Button/Button'
 import React from 'react';
+import styled from 'styled-components';
+
+import { Button } from './Button'
 
 const S = {
     Content: styled.div``,
@@ -29,7 +30,7 @@ export const SideBar = (props) => (
     <S.Wrapper>
         <S.Content>
             <S.Score><h2>Score: {props.score}</h2></S.Score>
-            <Button onClick={() => props.resetColors()}>RESET!</Button>
+            <Button onClick={() => props.resetColors()}>MIX IT UP!</Button>
         </S.Content>
     </S.Wrapper>
 )
